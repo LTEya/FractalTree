@@ -9,7 +9,8 @@ public void setup()
 public void draw() 
 {   
   background(0);   
-  stroke(39, 237, 36);   
+  stroke(39, 237, 36);  
+  
   strokeWeight(3); 
   line(320,480,320,380);     
   drawBranches(320, 380, 100.0, -PI/2);
@@ -25,6 +26,8 @@ public void drawBranches(int x,int y, double branchLength, double angle)
   int endY1 = (int)(branchLength*Math.sin(angle1) + y);
   int endX2 = (int)(branchLength*Math.cos(angle2) + x);
   int endY2 =  (int)(branchLength*Math.sin(angle2) + y);
+  stroke((int)Math.random()*256,100,100); 
+  strokeWeight(3);
   line(x, y, endX1, endY1); 
   line (x, y, endX2, endY2); 
    if (branchLength > smallestBranch){
